@@ -1,5 +1,4 @@
 import sys
-sys.path.append("/Users/tutrinh/Work/InterACT/birl/")
 import random
 from flask import Flask, render_template, request, jsonify
 import mdp_utils
@@ -37,7 +36,7 @@ feature_color = {
     4: '#946BBB',  # Purple
     5: '#FFFFFF'   # Goal (White)
 }
-SLEEP_TIME = 0
+SLEEP_TIME = 20
 
 teaching_option = None
 threshold = 0.3
