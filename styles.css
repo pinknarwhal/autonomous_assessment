@@ -1,0 +1,106 @@
+:root {
+    --red-color: #D42A2F;
+    --blue-color: #2778B2;
+    --green-color: #339F34;
+    --purple-color: #946BBB;
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    --lane-color: #666666;
+    --dirt-color: #955011;
+}
+
+.red-text, .collision-with-car-text {
+    color: var(--red-color);
+}
+.blue-text {
+    color: var(--blue-color);
+}
+.green-text {
+    color: var(--green-color);
+}
+.purple-text {
+    color: var(--purple-color);
+}
+.goal-text {
+    color: var(--black-color);
+}
+.left-lane-text, .middle-lane-text, .right-lane-text {
+    color: var(--lane-color);
+}
+.crash-into-dirt-text {
+    color: var(--dirt-color);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: left;
+    margin: 5px 100px 40px 100px;
+    padding: 10px 120px 40px 120px;
+}
+
+#grid-container, #status-update {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto; /* Center the grid horizontally within the container */
+}
+
+.square {
+    background-color: lightgray;
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+}
+
+.action {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: black;
+    background-color: transparent;
+    padding: 0;
+}
+
+/* Center the buttons */
+#end-button {
+    margin: 10px;
+    align-self: center; /* Center the button horizontally within the container */
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.index-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em; /* Adjust the font size as needed */
+    color: rgba(255, 255, 255, 0.2); /* Semi-transparent white color */
+}
+
+.arrow-icon {
+    font-size: 30px;
+}
